@@ -10,3 +10,96 @@ body {
   margin: 0;
   min-height: 100%;
 }
+
+/* Add space between the two nav
+Add border around header
+Center both nav on the same line */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgb(213, 214, 214);
+  /* position: fixed; */
+}
+
+/* Center  unordered list inside nav to be on the same line*/
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+/* Space out list inside unordered list inside all navs */
+nav ul li {
+  padding: 1rem;
+}
+
+/* .test {
+  font-size: larger;
+  font-weight: bold;
+} */
+/* Bold the word Octodex but going through childs of each parent function/element */
+header nav:nth-child(1) ul li:nth-child(2) {
+  font-size: larger;
+  font-weight: bold;
+}
+
+/* Flex wrap the section to make elements inside section wrap to next lines 
+Spaced out images with margin */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+}
+
+/* Aligned text and icon image inside all section unordered list
+Space between unorder list to move them on opposite ends of one another similar to the header*/
+section ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Added borders around img inside of all section img
+rounded border with radius */
+section img {
+  border: 2px solid rgb(225, 228, 232);
+  border-radius: 10px;
+}
+
+/* Space between images */
+article {
+  padding: 1rem;
+}
+
+/* Black font for all text
+Takeaway underline  */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* No bullet points for everything inside any unordered list */
+ul {
+  list-style: none;
+}
+
+/* Added border for footer
+Space out text */
+footer {
+  padding: 0.5rem;
+  border: 2px solid rgb(213, 214, 214);
+}
+
+/* While pixel width is at 600 or more the github text will not display */
+@media all and (min-width: 600px) {
+  header nav:nth-child(2) ul li:nth-child(2) {
+    display: none;
+  }
+}
+
+/* Once width is past 767 github text will appear */
+@media all and (min-width: 767px) {
+  header nav:nth-child(2) ul li:nth-child(2) {
+    display: list-item;
+  }
+}

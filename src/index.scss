@@ -46,9 +46,11 @@ header nav:nth-child(1) ul li:nth-child(2) {
 /* Flex wrap the section to make elements inside section wrap to next lines 
 Spaced out images with margin */
 section {
+  margin: 1rem;
+}
+main {
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem;
 }
 
 /* Aligned text and icon image inside all section unordered list
